@@ -1,0 +1,96 @@
+---
+# Database Credentials
+database:
+  host     : '127.0.0.1'
+  user     : 'xxxxxx'
+  password : 'xxxxxx'
+  name     : 'xxxxxx'
+  driver   : 'sqlite3'
+
+# Key
+key:
+  uuid: ''
+
+# UI
+ui:
+  theme: 'wet-boew'
+
+# Language
+language:
+  - en: '-e.html'
+    fr: '-f.html'
+  - en: '-en'
+    fr: '-fr'
+
+# Types is associated with WCMS content types
+# You can assign as many types as you wish along
+# with the corresponding csv file
+types:
+  page:
+    csv: '../import/import.csv'
+    host:
+      - 'http://wet-boew.github.io'
+    # encoding: 'iso-8859-1'
+    # proxy: 'http://user:pass@domain:post'
+
+# Schema of the Database
+# The field names should match the corresponding WCMS Fields
+# You should only declare media once
+schema:
+  links:
+    machine_name: links
+    fields: !!map
+      id:
+        type: TEXT NOT NULL
+      source:
+        type: varchar
+        length: 255
+      href:
+        type: varchar
+        length: 255
+      link:
+        type: varchar
+        length: 255
+        # options: unique
+    primary_key:
+      - "id"
+  media:
+    machine_name: media
+    fields: !!map
+      id:
+        type: TEXT NOT NULL
+      url:
+        type: varchar
+        length: 255
+      filename:
+        type: VARCHAR
+        length: 255
+      filename_uuid:
+        type: VARCHAR
+        length: 255
+      type:
+        type: VARCHAR
+        length: 255
+    primary_key:
+      - "id, url"
+  page:
+    machine_name: wetkit_page
+    fields: !!map
+      id:
+        type: INT NOT NULL
+      website:
+        type: VARCHAR
+        length: 255
+      language:
+        type: VARCHAR
+        length: 255
+      pattern:
+        type: VARCHAR
+        length: 255
+      title:
+        type: VARCHAR
+        length: 255
+      body:
+        type: TEXT
+    primary_key:
+      - "id"

@@ -1,0 +1,15 @@
+{
+    "curly"    : true,
+    "node"     : true,
+    "bitwise"  : true,
+    "undef"    : true,
+    "eqeqeq"   : true,
+    "noarg"    : true,
+    "mocha"    : true,
+    "unused"   : true,
+    "asi"      : true,
+    "esnext"   : true,
+    "globals"  : {
+      "jQuery" : true
+    }
+}

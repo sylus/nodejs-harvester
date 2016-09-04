@@ -1,0 +1,50 @@
+# General system
+.DS_Store
+*.tar.gz
+*.zip
+*.sublime-workspace
+
+# Config Files
+build/
+config/config.yml
+config/patterns.yml
+config/files
+
+# Import Files
+import/*
+!import/import.csv
+
+# Encrypted Data Bags
+data_bag_key
+
+# Librarian/RVM/Bundler
+nodes/*.json
+!nodes/dna.json
+data/*/
+cookbooks-projects/*
+tmp/*
+!tmp/.gitkeep
+
+# Berkshelf
+.vagrant
+Berksfile.lock
+*~
+*#
+.#*
+\#*#
+.*.sw[a-z]
+*.un~
+
+# Bundler
+Gemfile.lock
+bin/*
+.bundle/*
+
+# Application Cookbooks
+!/cookbooks/*
+
+# Node
+node_modules
+
+# Bower
+public/bower_components

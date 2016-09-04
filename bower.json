@@ -1,0 +1,28 @@
+{
+  "name": "NodeJS Harvester",
+  "version": "0.0.1",
+  "homepage": "https://github.com/sylus/nodejs-harvester",
+  "authors": [
+    "William Hearn <sylus1984@gmail.com>"
+  ],
+  "description": "An easily extended nodejs derived data harvester leveraging the cheerio framework.",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "bower.json",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.0",
+    "wet-boew": "wet-boew/wet-boew-cdn#v4.0.22",
+    "theme-gcweb": "https://github.com/wet-boew/themes-cdn/archive/v4.0.22-gcweb.tar.gz",
+    "theme-wet-boew": "https://github.com/wet-boew/themes-cdn/archive/v4.0.22-theme-wet-boew.tar.gz",
+    "underscore": "~1.5.1",
+    "requirejs": "~2.2.0",
+    "respond": "~1.4.2"
+  }
+}

@@ -1,0 +1,8 @@
+.rest
+  section
+    ul(class="list-unstyled")
+      li
+        if rest.path.indexOf(':id') == -1
+          a(href=`${rest.path}`) #{rest.path}
+        else
+          | #{rest.path}

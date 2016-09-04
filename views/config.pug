@@ -1,0 +1,41 @@
+extends layout
+
+block content
+  h1(id="wb-cont")=title
+  h2
+    | Database Configuration
+  ul
+    li
+      strong
+        | Host:
+      = ' ' + database.host
+    li
+      strong
+        | User:
+      = ' ' + database.user
+    li
+      strong
+        | Password:
+      = ' ' + database.password
+    li
+      strong
+        | Name:
+      = ' ' + database.name
+    li
+      strong
+        | Driver:
+      = ' ' + database.driver
+  h2
+    | UUID Configuration
+  ul
+    li
+      strong
+        | UUID:
+      = ' ' + key.uuid
+  h2
+    | Theme Configuration
+  ul
+    li
+      strong
+        | Theme:
+      = ' ' + ui.theme

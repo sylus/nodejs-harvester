@@ -1,0 +1,40 @@
+extends ../layout
+
+block content
+  div.jumbotron
+    h1 REST Routes
+  #routes
+    .row.wb-eqht
+      .col-md-6
+        .panel.panel-default.hght-inhrt
+          .panel-heading
+            h2(class="panel-title") Types
+          .panel-body
+            for rest in restful.get
+              if rest.path.indexOf('media') == -1 && rest.path.indexOf('link') == -1 && rest.path.indexOf('join') == -1 && rest.path.indexOf('architecture') == -1 && rest.path.indexOf('config') == -1 && rest.path != '/'
+                include rest
+      .col-md-6
+        .panel.panel-default.hght-inhrt
+          .panel-heading
+            h2(class="panel-title") Media
+          .panel-body
+            for rest in restful.get
+              if rest.path.indexOf('media') >= 0
+                  include rest
+    .row.wb-eqht
+      .col-md-6
+        .panel.panel-default.hght-inhrt
+          .panel-heading
+            h2(class="panel-title") Language
+          .panel-body
+            for rest in restful.get
+              if rest.path.indexOf('join') >= 0
+                  include rest
+      .col-md-6
+        .panel.panel-default.hght-inhrt
+          .panel-heading
+            h2(class="panel-title") Links
+          .panel-body
+            for rest in restful.get
+              if rest.path.indexOf('link') >= 0
+                  include rest

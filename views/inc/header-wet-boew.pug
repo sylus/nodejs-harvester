@@ -1,0 +1,62 @@
+header(role="banner")
+  div(id="wb-bnr")
+      div(id="wb-bar")
+        .container
+          .row
+            section(id="wb-lng" class="visible-md visible-lg")
+              h2
+                | Language selection
+              ul(class="text-right")
+                li(class="curr")
+                  | English&#32;<span>(current)</span>
+            section(class="wb-mb-links col-xs-12 visible-sm visible-xs" id="wb-glb-mn")
+              h2
+                | Search and menus
+              ul(class="pnl-btn list-inline text-right")
+                li
+                  a(href="#mb-pnl" title="Search and menus" aria-controls="mb-pnl" class="overlay-lnk btn btn-sm btn-default" role="button")
+                    span(class="glyphicon glyphicon-search")
+                      span(class="glyphicon glyphicon-th-list")
+                        span(class="wb-inv")
+                          | Search and menus
+              div(id="mb-pnl")
+      .container
+        .row
+          div(id="wb-sttl" class="col-md-8")
+            a(href="/")
+              object(type="image/svg+xml" tabindex="-1" data="/bower_components/theme-" + `${ui.theme}` + "/assets/logo.svg")
+              span
+                | NodeJS Harvester<span class="wb-inv">, </span>
+                small
+                  | An easily extended nodejs derived data harvester leveraging the cheerio framework.
+          section(id="wb-srch" class="col-md-4 visible-md visible-lg")
+              h2
+                | Search
+              form(action="https://google.ca/search" method="get" role="search" class="form-inline")
+                <div class="form-group">
+                    label(for="wb-srch-q")
+                      | Search website
+                    input(id="wb-srch-q" class="form-control" name="q" type="search" value="" size="27" maxlength="150")
+                    input(type="hidden" name="q" value="site:nodejs-harvester.github.io OR site:github.com/sylus/nodejs-harvester")
+                </div>
+                <button type="submit" id="wb-srch-sub" class="btn btn-default">Search</button>
+  nav(role="navigation" id="wb-sm" data-trgt="mb-pnl"  class="wb-menu visible-md visible-lg" typeof="SiteNavigationElement")
+    .container.nvbar
+      h2
+        | Topics menu
+      .row
+        ul(class="list-inline menu")
+          - var obj = { 'architecture':'Architecture', 'config':'Configuration' }
+            each val, key in obj
+              li
+                a(href=`${key}`) #{val}
+  nav(role="navigation" id="wb-bc" property="breadcrumb")
+    h2
+      | You are here:
+    .container
+      .row
+        ol(class="breadcrumb")
+          - var obj = { '/':'Home' }
+            each val, key in obj
+              li
+                a(href=`${key}`) #{val}

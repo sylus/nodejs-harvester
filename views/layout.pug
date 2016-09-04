@@ -1,0 +1,23 @@
+doctype html
+<!--[if lt IE 9]><html class="no-js lt-ie9" lang="en" dir="ltr"><![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en" dir="ltr">
+<!--<![endif]-->
+  include inc/head
+  body(vocab="http://schema.org/" typeof="WebPage")
+    ul(id="wb-tphp")
+      li(class="wb-slc")
+        a(class="wb-sl" href="#wb-cont")
+          | Skip to main content
+      li(class="wb-slc visible-sm visible-md visible-lg")
+        a(class="wb-sl" href="#wb-info")
+          | Skip to "About this site"
+    if ui.theme == 'gcweb'
+      include inc/header-gcweb
+    else
+      include inc/header-wet-boew
+    main(role="main" property="mainContentOfPage" class="container")
+      block content
+    include inc/footer
+    include inc/scripts
+</html>

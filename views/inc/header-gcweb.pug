@@ -1,0 +1,66 @@
+header(role="banner")
+  div(id="wb-bnr")
+    div(id="wb-bar" class="container")
+      section(id="wb-lng" class="visible-md visible-lg text-right")
+        h2(class="wb-inv")
+          | Language selection
+        .row
+          .col-md-12
+            ul(class="list-inline margin-bottom-none")
+              li
+                a(lang="fr" href="/")
+                  | Français
+      .row
+        div(class="brand col-xs-8 col-sm-9 col-md-6")
+          a(href="http://www.canada.ca/en/index.html")
+            object(type="image/svg+xml" tabindex="-1" data="/bower_components/theme-gcweb/assets/sig-blk-en.svg")
+            span(class="wb-inv")
+              | Government of Canada
+        section(class="wb-mb-links col-xs-4 col-sm-3 visible-sm visible-xs" id="wb-glb-mn")
+          h2
+            | Search and menus
+          ul(class="list-inline text-right chvrn")
+            li
+              a(href="#mb-pnl" title="Search and menus" aria-controls="mb-pnl" class="overlay-lnk" role="button")
+                span(class="glyphicon glyphicon-search")
+                  span(class="glyphicon glyphicon-th-list")
+                    span(class="wb-inv")
+                      | Search and menus
+          div(id="mb-pnl")
+        section(id="wb-srch" class="col-xs-6 text-right visible-md visible-lg")
+          h2
+            | Search
+          form(action="#" method="post" name="cse-search-box" role="search" class="form-inline")
+            .form-group
+                label(for="wb-srch-q" class="wb-inv")
+                  | Search website
+                input(id="wb-srch-q" list="wb-srch-q-ac" class="wb-srch-q form-control" name="q" type="search" value="" size="27" maxlength="150" placeholder="Search Canada.ca")
+                datalist(id="wb-srch-q-ac")
+                  <!--[if lte IE 9]><select><![endif]-->
+                  <!--[if lte IE 9]></select><![endif]-->
+            div(class="form-group submit")
+              button(type="submit" id="wb-srch-sub" class="btn btn-primary btn-small" name="wb-srch-sub")
+                span(class="glyphicon-search glyphicon")
+                span(class="wb-inv")
+                  | Search
+  nav(role="navigation" id="wb-sm" data-trgt="mb-pnl"  class="wb-menu visible-md visible-lg" typeof="SiteNavigationElement")
+    .container.nvbar
+      h2
+        | Topics menu
+      .row
+        ul(class="list-inline menu")
+          - var obj = { 'architecture':'Architecture', 'config':'Configuration' }
+            each val, key in obj
+              li
+                a(href=`${key}`) #{val}
+
+  nav(role="navigation" id="wb-bc" property="breadcrumb")
+    h2
+      | You are here:
+    .container
+      .row
+        ol(class="breadcrumb")
+          - var obj = { '/':'Home' }
+            each val, key in obj
+              li
+                a(href=`${key}`) #{val}

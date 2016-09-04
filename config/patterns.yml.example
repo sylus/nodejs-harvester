@@ -1,0 +1,12 @@
+---
+# Patterns
+patterns:
+  default: !!map
+    title:
+      selector: 'title'
+      html: No
+      media: No
+    body:
+      selector: 'body'
+      html: Yes
+      media: No
