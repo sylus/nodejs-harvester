@@ -55,7 +55,6 @@ header(role="banner")
     .container
       .row
         ol(class="breadcrumb")
-          - var obj = { '/':'Home' }
-            each val, key in obj
-              li
-                a(href=`${key}`) #{val}
+          each val, key in breadcrumbs
+            li
+              a(href=`${key}`) #{val}
