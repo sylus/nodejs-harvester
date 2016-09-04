@@ -49,11 +49,9 @@ header(role="banner")
         | Topics menu
       .row
         ul(class="list-inline menu")
-          - var obj = { 'architecture':'Architecture', 'config':'Configuration' }
-            each val, key in obj
-              li
-                a(href=`${key}`) #{val}
-
+          each val, key in menus
+            li
+              a(href=`${key}`) #{val}
   nav(role="navigation" id="wb-bc" property="breadcrumb")
     h2
       | You are here:
