@@ -53,7 +53,7 @@ header(role="banner")
             if (typeof val === "object")
               each sub_val, sub_key in val
                 li
-                  a(href=`${key}` class="item") #{sub_val.value}
+                  a(href=`${sub_val.path}` class="item") #{sub_val.value}
                   if (typeof sub_val.submenu === "object")
                     each links in sub_val.submenu
                       ul(class="sm list-unstyled")
