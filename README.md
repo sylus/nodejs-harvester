@@ -136,7 +136,7 @@ The following is the current table discussion this parameters along with their i
 
 | Parameter   | Description                                                                              |
 | ----------- | ---------------------------------------------------------------------------------------- |
-| `&#124;`    | Will remove CSS DOM from the initial returned result from css token.                     |
+| `|`         | Will remove CSS DOM from the initial returned result from css token.                     |
 | `~`         | Allows for you to pass a Cheerio Operator that the nodejs script will run as a callback. |
 
 Based on the parameters above a query could resemble the following:
