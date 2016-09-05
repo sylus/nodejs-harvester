@@ -47,8 +47,19 @@ header(role="banner")
       .row
         ul(class="list-inline menu")
           each val, key in menus
-            li
-              a(href=`${key}`) #{val}
+            if (typeof val === "object")
+              each sub_val, sub_key in val
+                li
+                  a(href=`${key}` class="item") #{sub_val.value}
+                  if (typeof sub_val.submenu === "object")
+                    each links in sub_val.submenu
+                      ul(class="sm list-unstyled")
+                        each link, href in links
+                          li
+                            a(href=`${href}`) #{link}
+            else
+              li
+                a(href=`${key}`) #{val}
   nav(role="navigation" id="wb-bc" property="breadcrumb")
     h2
       | You are here:
