@@ -17,7 +17,6 @@ While parsing the url's any documents / media / images that are found will be do
   npm install
   npm install -g bower
   npm install -g grunt-cli
-  npm install -g marked
 ```
 
 3. Configure your config.yml file.
@@ -35,7 +34,6 @@ While parsing the url's any documents / media / images that are found will be do
   grunt export       // Expanded -> ['jshint', 'jscs', 'uglify', 'nodemon:export']
   grunt restore      // Expanded -> ['clean', 'jshint', 'jscs', 'uglify']
   grunt serve        // Expanded -> ['jshint', 'jscs', 'uglify', 'nodemon:serve']
-
   grunt readconfig   
   grunt updateconfig
 ```
