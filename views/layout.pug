@@ -18,6 +18,9 @@ doctype html
       include inc/header-wet-boew
     main(role="main" property="mainContentOfPage" class="container")
       block content
-    include inc/footer
+    if ui.theme == 'gcweb'
+      include inc/footer-gcweb
+    else
+      include inc/footer-wet-boew
     include inc/scripts
 </html>
