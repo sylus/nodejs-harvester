@@ -74,7 +74,7 @@ schema:
     primary_key:
       - "id, url"
   page:
-    machine_name: wetkit_page
+    machine_name: wxt_page
     fields: !!map
       id:
         type: INT NOT NULL
