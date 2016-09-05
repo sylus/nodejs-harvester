@@ -14,9 +14,9 @@ While parsing the url's any documents / media / images that are found will be do
 2. Run the following commands from working directory:
 
 ```sh
-  npm install
   npm install -g bower
   npm install -g grunt-cli
+  npm install
 ```
 
 3. Configure your config.yml file.
