@@ -13,7 +13,7 @@ block content
             h2(class="panel-title") Types
           .panel-body
             for rest in restful.get
-              if rest.path.indexOf('media') == -1 && rest.path.indexOf('link') == -1 && rest.path.indexOf('join') == -1 && rest.path.indexOf('architecture') == -1 && rest.path.indexOf('config') == -1 && rest.path != '/'
+              if rest.path.indexOf('media') == -1 && rest.path.indexOf('link') == -1 && rest.path.indexOf('join') == -1 && rest.path.indexOf('architecture') == -1 && rest.path.indexOf('config') == -1 && rest.path.indexOf('lookup') == -1 && rest.path != '/'
                 include rest
       .col-md-6
         .panel.panel-default.hght-inhrt
@@ -30,7 +30,7 @@ block content
             h2(class="panel-title") Language
           .panel-body
             for rest in restful.get
-              if rest.path.indexOf('join') >= 0
+              if rest.path.indexOf('join') >= 0 || rest.path.indexOf('lookup') >= 0 
                   include rest
       .col-md-6
         .panel.panel-default.hght-inhrt
