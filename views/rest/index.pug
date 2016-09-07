@@ -27,14 +27,6 @@ block content
       .col-md-6
         .panel.panel-default.hght-inhrt
           .panel-heading
-            h2(class="panel-title") Language
-          .panel-body
-            for rest in restful.get
-              if rest.path.indexOf('join') >= 0 || rest.path.indexOf('lookup') >= 0
-                  include rest
-      .col-md-6
-        .panel.panel-default.hght-inhrt
-          .panel-heading
             h2(class="panel-title") Links
           .panel-body
             for rest in restful.get
@@ -43,8 +35,16 @@ block content
       .col-md-6
         .panel.panel-default.hght-inhrt
           .panel-heading
-            h2(class="panel-title") Table
+            h2(class="panel-title") Tables
           .panel-body
             for rest in restful.get
               if rest.path.indexOf('table') >= 0
+                  include rest
+      .col-md-6
+        .panel.panel-default.hght-inhrt
+          .panel-heading
+            h2(class="panel-title") Language
+          .panel-body
+            for rest in restful.get
+              if rest.path.indexOf('join') >= 0 || rest.path.indexOf('lookup') >= 0
                   include rest
