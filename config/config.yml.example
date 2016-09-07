@@ -22,6 +22,11 @@ language:
   - en: '-en'
     fr: '-fr'
 
+# Token
+# Default is a simple token replace but if using a DOM parse
+# can specify tag to generate a tag with token
+token: ''
+
 # Types is associated with WCMS content types
 # You can assign as many types as you wish along
 # with the corresponding csv file
