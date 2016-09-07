@@ -82,7 +82,7 @@ module.exports = (grunt) ->
         options:
           args: ['export']
           cwd: "build"
-          ignore: ['files/**', 'files/*']
+          ignore: ['files/**', 'files/*', 'export/**', 'export/*']
 
     pkg:
       grunt.file.readJSON("package.json")
