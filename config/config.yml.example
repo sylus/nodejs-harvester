@@ -37,7 +37,7 @@ types:
 # The field names should match the corresponding WCMS Fields
 # You should only declare media once
 schema:
-  links:
+  component_links:
     machine_name: links
     fields: !!map
       id:
@@ -53,8 +53,8 @@ schema:
         length: 255
         # options: unique
     primary_key:
-      - "id"
-  media:
+      - id
+  component_media:
     machine_name: media
     fields: !!map
       id:
@@ -73,7 +73,26 @@ schema:
         length: 255
     primary_key:
       - "id, url"
-  page:
+  component_table:
+    machine_name: component_table
+    fields:
+      id:
+        type: TEXT NOT NULL
+      url:
+        type: varchar
+        length: 255
+      classes:
+        type: VARCHAR
+        length: 255
+      table_markup:
+        type: VARCHAR
+        length: 255
+      type:
+        type: VARCHAR
+        length: 255
+    primary_key:
+      - "id, url"
+  component_page:
     machine_name: wxt_page
     fields: !!map
       id:
