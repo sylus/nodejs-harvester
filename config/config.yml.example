@@ -26,7 +26,7 @@ language:
 # You can assign as many types as you wish along
 # with the corresponding csv file
 types:
-  page:
+  component_page:
     csv: '../import/import.csv'
     host:
       - 'http://wet-boew.github.io'
