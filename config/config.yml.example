@@ -22,6 +22,10 @@ language:
   - en: '-en'
     fr: '-fr'
 
+# CMS
+# Currently only 'aem' option is supported
+cms: ''
+
 # Token
 # Default is a simple token replace but if using a DOM parse
 # can specify tag to generate a tag with token
