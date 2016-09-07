@@ -168,7 +168,7 @@ For every defined schema type in the [config.yml][config] file the following res
 [jshint]:     https://github.com/gruntjs/grunt-contrib-jshint
 [grunt]:      http://gruntjs.com
 [importcsv]:  http://github.com/nodejs-harvester/blob/master/import/import.csv
-[methods]:    https://github.com/joyent/node/wiki/Installing-Node.js-via-package-manager
+[methods]:    https://nodejs.org/en/download
 [moment]:     http://momentjs.com
 [node]:       http://nodejs.org
 [nodemon]:    https://github.com/ChrisWren/grunt-nodemon
