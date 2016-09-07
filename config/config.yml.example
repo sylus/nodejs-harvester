@@ -34,8 +34,8 @@ types:
     # proxy: 'http://user:pass@domain:post'
 
 # Schema of the Database
-# The field names should match the corresponding WCMS Fields
-# You should only declare media once
+# component_(links|media|table) are mandatory tables
+# component_page is a custom type of which you can add many
 schema:
   component_links:
     machine_name: links

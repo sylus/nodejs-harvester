@@ -10,7 +10,7 @@ block content
       .col-md-6
         .panel.panel-default.hght-inhrt
           .panel-heading
-            h2(class="panel-title") Types (YAML)
+            h2(class="panel-title") Custom Types (YAML)
           .panel-body
             for rest in restful.get
               if rest.path.indexOf('media') == -1 && rest.path.indexOf('table') == -1 && rest.path.indexOf('link') == -1 && rest.path.indexOf('join') == -1 && rest.path.indexOf('architecture') == -1 && rest.path.indexOf('config') == -1 && rest.path.indexOf('lookup') == -1 && rest.path != '/'

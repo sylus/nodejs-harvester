@@ -42,17 +42,12 @@ While parsing the url's any documents / media / images that are found will be do
 
 Currently their are 6 (+1 debugger) configured grunt tasks to interact with the NodeJS Harvester.
 
-1. Grunt Harvest: Runs the entire harvest routine converting a correctly formatted csv into a live REST Route via sqlite3.
-
-2. Grunt Restore: Will wipe all retrieved data and bring the harvester back to its pristine state.
-
-3. Grunt Serve: Will instantiate the REST routes based on an already created sqlite database from an earlier harvest.
-
-4. Grunt Export: Will instantiate the REST routes based on an already created sqlite database and export to JSON file representation.
-
-5. Grunt ReadConfig: Will output the YAML configuration file to the console.
-
-6. Grunt UpdateConfig: Will update the YAML configuration file with a passed in UUID.
+1. `Grunt Harvest`: Runs the entire harvest converting a correctly formatted CSV into a live REST Route powered by a custom db layer.
+2. `Grunt Restore`: Will wipe all retrieved data and bring the harvester back to pristine state.
+3. `Grunt Serve`: Instantiates the REST routes based on an instantiated database layer (sqlite3 tested) from an earlier harvest.
+4. `Grunt Export`: Instantiates the REST routes based on an instantiated database layer (sqlite3 tested).
+5. `Grunt ReadConfig`: Output the current YAML configuration file to stdout.
+6. `Grunt UpdateConfig`: Update YAML config file with UUID as param.
 
 ## How it Works
 
@@ -151,7 +146,7 @@ When the import.csv file is processed data is written to the database based on h
 
 Most of the defined tables inside the [sqlite][sqlite] database are passed to [Express][express] in order to rendered as [REST Routes][routes].
 
-For every defined schema type in the [config.yml][config] file the following rest routes will be made:
+For every defined schema type in the [config.yml][config] file the following rest routes will be made (only global ones shown below):
 
 | Route                    | Description                                                                          |
 | ------------------------ | ------------------------------------------------------------------------------------ |

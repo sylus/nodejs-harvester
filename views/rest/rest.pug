@@ -3,6 +3,7 @@
     ul(class="list-unstyled")
       li
         if rest.path.indexOf(':id') == -1
-          a(href=`${rest.path}`) #{rest.path}
+            a(href=`${rest.path}` class="text-primary") #{rest.path}
         else
-          | #{rest.path}
+          span(class="text-muted")
+            | #{rest.path}
