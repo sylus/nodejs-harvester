@@ -1,0 +1,14 @@
+# Docker Compose (v2)
+
+version: "2"
+services:
+
+  harvest:
+    build: .
+    ports:
+      - "8095:8095"
+
+networks:
+  default:
+    external:
+        name: drupalwxt_default
