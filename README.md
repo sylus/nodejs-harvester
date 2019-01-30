@@ -34,7 +34,7 @@ While parsing the url's any documents / media / images that are found will be do
   grunt export       // Expanded -> ['jshint', 'jscs', 'uglify', 'nodemon:export']
   grunt restore      // Expanded -> ['clean', 'jshint', 'jscs', 'uglify']
   grunt serve        // Expanded -> ['jshint', 'jscs', 'uglify', 'nodemon:serve']
-  grunt readconfig   
+  grunt readconfig
   grunt updateconfig
 ```
 

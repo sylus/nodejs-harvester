@@ -47,4 +47,4 @@ bin/*
 node_modules
 
 # Bower
-public/bower_components
+public/components

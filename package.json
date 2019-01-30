@@ -4,12 +4,18 @@
   "description": "A node js derived data harvester leveraging cheerio.",
   "main": "harvest.js",
   "dependencies": {
+    "@frontend/jquery": "jquery/jquery-dist#2.1.0",
+    "@frontend/respond": "scottjehl/Respond#1.4.2",
+    "@frontend/requirejs": "https://github.com/requirejs/requirejs-bower/archive/2.2.0.tar.gz",
+    "@frontend/theme-gcweb": "https://github.com/wet-boew/themes-cdn/archive/v4.0.22-gcweb.tar.gz",
+    "@frontend/theme-wet-boew": "https://github.com/wet-boew/themes-cdn/archive/v4.0.22-theme-wet-boew.tar.gz",
+    "@frontend/underscore": "jashkenas/underscore#1.5.1",
+    "@frontend/wet-boew": "wet-boew/wet-boew-cdn#v4.0.22",
     "any-db": "~1.0.0",
     "any-db-mysql": "~1.0.0",
     "any-db-postgres": "~1.0.0",
     "any-db-sqlite3": "~1.0.1",
     "async-replace": "1.0.1",
-    "bower": "~1.7.9",
     "cheerio": "~0.22.0",
     "csv": "~0.3.7",
     "express": "~3.4.8",
@@ -49,7 +55,7 @@
     "request"
   ],
   "scripts": {
-    "postinstall": "bower install",
+    "postinstall": "node -e \"try { require('fs').symlinkSync(require('path').resolve('node_modules/@frontend'), 'public/components', 'junction') } catch (e) { }\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -59,5 +65,8 @@
   "bugs": {
     "url": "https://github.com/sylus/nodejs-harvester/issues"
   },
-  "homepage": "https://github.com/sylus/nodejs-harvester"
+  "homepage": "https://github.com/sylus/nodejs-harvester",
+  "engines": {
+    "yarn": ">= 1.0.0"
+  }
 }
